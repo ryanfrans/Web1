@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hi this is Ryan Frans Webpage</title>
+    </head>
+    <body>
+        <h1>Welcome to Ryan Frans Website</h1>
+        <h2>Welcome to Ryan Frans Website</h2>
+        <h3>Welcome to Ryan Frans Website</h3>
+
+        <p>Todday is Sunday, <br>
+             I <br>
+             have <br>
+             a <br>
+             web <br>
+             programing class today  </p>
+
+             <p>I love lerning web programing</p>
+
+             <pre>
+                wab 
+                    programing
+                        is 
+                            easy
+             </pre>
+
+             <p><strong>This is a bold taxt</strong></p>
+             <p><strong>This is an italic taxt</strong></p>
+             <p><strong>This is an underline text</strong></p>
+             <p>H<sub>2</sub>0</p>
+
+             <a hrafe"https://moodle.unai.edu">Here to open moodle.unia.edo</a>
+             <a targets"_blank" hrafe"https://google.com> Click to open google</a>
+
+             <ul>
+                <li>Fakultas Teknologi Informasi</li>
+                <li>Fakultas Ekonomi</li>
+                <li>Fakultas MIPA</li>
+
+                <img src="r.jpeg"
+             </ul>
+        <p></p>
+    </body>
+</html>
