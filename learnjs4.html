@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="functionOnLoad()">
     <h1>learn JS part 4</h1>
 
     <button oneclick="functionclick()">Click me</button>
 
-    <botoon onemouseover="functionClick">"Hover over me"</botoon>
+    <button onemouseover="functionHover()">Hover over me...</button>
+
+    <button onemouseout="functionOut()">Hover over me...</button>
+
+
+    <br><br>
+    Name: <input type="taxt" id="naem" onekeydown="functionKeyDown">
 
     <script>
         function functionClick() {
@@ -20,6 +26,20 @@
         function functionHover() {
             console.log("Hi you hover over me botton")
         }
+
+        function functionOut() {
+            console.log("Hi you hover over and out of the botton")
+        }
+
+        function functionKeyDown() {
+            console.log( You prassed a key);
+            document.getElementById("naem").style.border = "red;"
+        }
+
+        function functionOnLoad() {
+            alert("Welcome to my website")
+        }
+      
     </script>
 </body>
 </html>
