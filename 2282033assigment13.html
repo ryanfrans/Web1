@@ -1,63 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Contact</title>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  let email = document.forms["myForm"]["email"].value;
+  let username = document.forms["myForm"]["username"].value;
+  let password = document.forms["myForm"]["password"].value;
+  let gender = document.forms["myForm"]["gender"].value;
+  let religion = document.forms["myForm"]["religion"].value;
+  let address = document.forms["myForm"]["address"].value;
+  let hobbies = document.forms["myForm"]["hobbies"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  } else if(email == ""){
+    alert("Email must be filled out")
+    return false;
+  }else if(username == ""){
+    alert("Username must be filled out")
+    return false;
+  }else if(password == ""){
+    alert("Please add your password")
+    return false;
+  }else if(gender == ""){
+    alert("Please choose your gender")
+    return false;
+  }else if(religion == ""){
+    alert("Please choose your religion")
+    return false;
+  }else if(address == ""){
+    alert("Address must be filled out")
+    return false;
+  }else if( hobbies == ""){
+    alert("Please, at least choose one hobbies")
+    return false;
+  } else {
+    return false;
+  }
+}
+</script>
 </head>
 <body>
-    <div class="container">
-        <h2>Contact Us</h2>
-        <form>
-          <div class="form-group">
-            <label for="full-name">Full Name:</label>
-            <input type="text" id="full-name" name="full-name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-          </div>
-          <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-          </div>
-          <div class="form-group">
-            <label for="gender">Gender:</label>
-            <input type="radio" id="male" name="gender" value="male" required>
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female" required>
-            <label for="female">Female</label>
-          </div>
-          <div class="form-group">
-            <label for="religion">Religion:</label>
-            <select id="religion" name="religion" required>
-              <option value="">Select Religion</option>
-              <option value="islam">Islam</option>
-              <option value="christianity">Christianity</option>
-              <option value="hinduism">Hinduism</option>
-              <option value="buddhism">Buddhism</option>
-              <option value="others">Others</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="address">Address:</label>
-            <textarea id="address" name="address" required></textarea>
-          </div>
-          <div class="form-group">
-            <label for="hobbies">Hobbies:</label>
-            <input type="checkbox" id="hobby1" name="hobbies[]" value="reading">
-            <label for="hobby1">Reading</label>
-            <input type="checkbox" id="hobby2" name="hobbies[]" value="traveling">
-            <label for="hobby2">Traveling</label>
-            <input type="checkbox" id="hobby3" name="hobbies[]" value="gaming">
-            <label for="hobby3">Gaming</label>
-          </div>
-          <input type="submit" class="submit-button" value="Save">
-        </form>
-      </div>
+
+<h2>JavaScript Validation</h2>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name  : <input type="text" name="fname"><br><br>
+  Email : <input type="text" name="email"><br><br>
+  Username : <input type="text" name="username"><br><br>
+  Password : <input type="password" name="password"><br><br>
+  Gender : <input type="radio" name="radio" id="gender">Male
+  <input type="radio" name="radio" id="gender">Female<br><br>
+  Religion : <select name="select-box" id="religion">
+      <option value="0">Select Religion:</option>
+      <option value="1">Christian</option>
+      <option value="2">Islam</option>
+      <option value="3">Advent</option>
+      <option value="4">Chatolic</option>
+      <option value="5">Hinduism</option>
+  </select> <br><br>
+  Address : <textarea name="subject" id="address" cols="30" rows="10"></textarea><br>
+  Hobbies : <input type="checkbox" name="checkbox" id="hobbies">Dancing
+  <input type="checkbox" name="checkbox" id="hobbies">Drawing
+  <input type="checkbox" name="checkbox" id="hobbies">Singing
+  <input type="checkbox" name="checkbox" id="hobbies">Swimming
+  <input type="checkbox" name="checkbox" id="hobbies">Reading <br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
 </body>
 </html>
